@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+//import PrimeraApp from './PrimeraApp';
+import CounterApp from './CounterApp';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//una manera de trabajar con css
+import './index.css'
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+//JSX (javascript + xml)
+//const saludo = <h1>Hola Mundo</h1>
+
+//obtenemos la referencia del div con id=root de la página index.html
+const divRoot = document.querySelector('#root');
+
+//renderizamos el saludo en el elemento div del HTML
+//ReactDOM.render(saludo, divRoot)
+//ReactDOM.render( <PrimeraApp saludo="Hola, soy Goku"/>, divRoot)
+ReactDOM.render( <CounterApp value={10}/>, divRoot)
